@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html{
+  --yellow: #EFAF00;
+  --red: #EA631F;
+  --lightRed: #EA631F0F;
+  --black: #191919;
+  --white: #ffffff;
+  --grey: #C0C0C0;
+  --lightGrey: #878787B8;
+
+
+/* 1rem = 16px (User Agent) = 100% (User Agent) */
+  font-size: 62.5% /* 10px */;
+  font-family: sans-serif;
+  color: var(--brown);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--lightRed);
+  color: var(--black);
+  font-family: 'Poppins', sans-serif;
+}
+
+.topic{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  width: 70rem;
+  height: 32rem;
+  padding-left: 5.5rem;
+  box-shadow: 4px 0px 19px 0px #00000014;
+}
+
+.topic img{
+  position: relative;
+  left: 4rem;
+}
+
+.topicContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 18.5rem;
+}
+
+.topicContent h1{
+  width: 17rem;
+  font-size: 4.8rem;
+  font-weight: 600;
+  line-height: 5.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.topicContent .topicNumbers{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.4rem;
+}
+
+.topicNumbers{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+#numQuestions{
+  text-align: center;
+  margin-right: 3.0rem;
+}
+
+#numAnswers{
+  text-align: center;
+}
+
+#numQuestions p:first-child, 
+#numAnswers p:first-child{
+  font-size: 2.4rem;  
+  line-height: 1.3rem;
+}
+
+button{
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--yellow);
+  border-radius: 1.0rem;
+  border: 0.2rem solid #191919;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.askBox{
+  background-color: var(--white);
+  box-shadow: 4px 0px 19px 0px #00000014;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  width: 70rem;
+  height: max-content;
+  padding: 2.4rem 5.5rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1{
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+input{
+  border: .2rem solid var(--black);
+  border-radius: .5rem;
+  padding-left: 1.2rem;
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+input[type=text]{
+  height: 4.2rem;
+  margin-bottom: 1.6rem;
+}
+
+textarea{
+  height: 12rem;
+  margin-bottom: 1.6rem;
+  resize: none;
+  border: .2rem solid var(--black);
+  border-radius: .5rem;
+  padding-left: 1.2rem;
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+textarea::placeholder{
+  padding-top: 0.4rem;
+  color: var(--grey);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+input::placeholder{
+  color: var(--grey);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+form > button {
+  width: 15rem;
+}
+
+#grey{
+  background-color: var(--grey);
+  margin-left: 1.6rem;
+}
+
+.askButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
