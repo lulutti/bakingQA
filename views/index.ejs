@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include('./parts/head'); -%>
 <body>
-  <div class="topic">
-    <div class="topicContent">
-      <h1>Baking Q&A</h1>
-      <div class="topicNumbers">
-        <div id="numQuestions"><p>1200</p><p>Questions</p></div>
-        <div id="numAnswers"><p>867</p><p>Answers</p></div>
-        </div>
-      <button>Ask a question</button>
+  <main>
+    <div class="topic">
+      <div class="topicContent">
+        <h1>Baking Q&A</h1>
+        <div class="topicNumbers">
+          <div id="numQuestions"><p>1200</p><p>Questions</p></div>
+          <div id="numAnswers"><p>867</p><p>Answers</p></div>
+          </div>
+         <a href="" class="button" id="yellowButton">Ask a question</a>
+      </div>
+      <img src="/assets/cake.svg" alt="Cake Illustration">
     </div>
-    <img src="/assets/cake.svg" alt="Cake Illustration">
-  </div>
- 
-  <%- include(`parts/${page}`) %>       
+    
+    
+    <div class="questions">
+      <% questions.forEach(question => {%>
+      <div class=boxQuestion>
+        <p id="answersCount">6 answers</p>
+        <div class="contentQuestion">
+          <p id="titleAsk"><%= question.title %></p>
+        <p class="view" id="descriptionAsk"><%= question.description %></p>
+        </div>
+        <div class="questionButtons">
+          <a href="/question/<%=question.id%>" class="button" id="yellowButton">Answer</a>
+        </div>
+      </div>
+    <%})%>
+  </div>  
+  </main>
+  
+  <script src="js/scripts.js"></script>
 </body>
 </html>

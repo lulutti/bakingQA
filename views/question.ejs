@@ -1,0 +1,21 @@
+<%- include('./parts/head'); -%>
+<div class=boxQuestion>
+        <p id="answersCount">6 answers</p>
+        <div class="contentQuestion">
+          <p id="titleAsk"><%= question.title %></p>
+        <p id="descriptionAsk"><%= question.description %></p>
+        </div>
+        <div class="questionButtons">
+          <button id="yellowButton">Answer</button>
+        </div>
+</div>
+<div class=boxAnswer>
+        <form action="#" method="POST">
+                <textarea name="answer" id="" cols="30" rows="10">
+
+                </textarea>
+                <button id="yellowButton">
+                        Send
+                </button>
+        </form>
+</div>

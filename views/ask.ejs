@@ -1,11 +1,22 @@
+   <!DOCTYPE html>
+   <%- include('./parts/head'); -%>
+   <body>
+     <main>
     <div class="askBox">
       <h1>My sweet question is</h1>
        <form method="POST" action="/saveQuestion">
           <input name="title" type="text" placeholder="Question Title"/>
           <textarea name="description" rows="5" placeholder="Describe your question..."></textarea>
           <div class="askButtons">
-            <button type="submit">Send</button>
-            <button type="reset" id="grey">Cancel</button>
+            <button type="submit" id="yellowButton">Send</button>
+            <button type="reset" id="greyButton">Cancel</button>
         </div>
       </form>
     </div>
+  </main>
+   </body>
+   </html>
+   
+   
+   
+   
