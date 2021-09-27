@@ -6,16 +6,20 @@
         <p id="descriptionAsk"><%= question.description %></p>
         </div>
         <div class="questionButtons">
-          <button id="yellowButton">Answer</button>
+          <a href="#" class="button" id="yellowButton">Answer</a>
         </div>
 </div>
 <div class=boxAnswer>
-        <form action="#" method="POST">
-                <textarea name="answer" id="" cols="30" rows="10">
-
-                </textarea>
-                <button id="yellowButton">
-                        Send
-                </button>
+        <form action="/question/<%=question.id%>/saveAnswer" method="POST">
+                <p>Your answer</p>
+                <textarea name="body" cols="30" rows="10" placeholder="Be kind and sweet"></textarea>
+                <button type="submit">send</button>
+                <a href="#" type="submit" class="button" id="yellowButton">Send</a>
         </form>
+</div>
+
+<div class="answers">
+        <%answer.forEach(answer => {%>
+                <%=answer.body%>
+        <%})%>
 </div>

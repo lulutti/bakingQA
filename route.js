@@ -2,6 +2,9 @@ const express = require("express");
 const route = express();
 const db = require("./db/database");
 const Question = require("./db/Question");
+const Answer = require("./db/Answer");
+const QuestionController = require("./controllers/QuestionController");
+const AnswerController = require("./controllers/AnswerController")
 
 //Database
 db
@@ -23,26 +26,8 @@ route.get("/", (req, res) => {
 route.get('/ask', (req, res) => res.render("ask"));
 
 // Salvando dados do formulário de pergunta
-route.post("/saveQuestion", (req, res) => {
-        Question.create({
-              title: req.body.title,
-              description: req.body.description
-        }).then(() => {
-                res.redirect("/");
-        });
-});
-
-route.get("/question/:id", (req, res) => {
-        let id = req.params.id;
-        Question.findOne({
-                where: {id: id}
-        }).then(question => {
-                if(question != undefined){
-                        res.render("question", {question: question});
-                } else {
-                        res.redirect("/")
-                }
-        })
-})
+route.post("/saveQuestion", QuestionController.create);
+route.get("/question/:id", QuestionController.open);
+route.post("/question/:id/saveAnswer", AnswerController.save);
 
 module.exports = route;
