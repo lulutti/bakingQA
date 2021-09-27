@@ -6,14 +6,17 @@ const Question = db.define('question',{
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
                 primaryKey: true,
+                notEmpty: true
         },
         title:{
                 type: Sequelize.STRING,
                 allowNull: false,
+                notEmpty: true
         },
         description:{
                 type: Sequelize.TEXT,
                 allowNull: false,
+                notEmpty: true
         }
 });
 

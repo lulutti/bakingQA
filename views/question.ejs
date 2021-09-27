@@ -1,11 +1,13 @@
 <%- include('./parts/head'); -%>
+<%- include('./parts/header'); -%>
+
 <div class=boxQuestion>
         <p id="answersCount">6 answers</p>
         <div class="contentQuestion">
           <p id="titleAsk"><%= question.title %></p>
         <p id="descriptionAsk"><%= question.description %></p>
         </div>
-        <div class="questionButtons">
+        <div class="actionButtons">
           <a href="#" class="button" id="yellowButton">Answer</a>
         </div>
 </div>
@@ -13,13 +15,16 @@
         <form action="/question/<%=question.id%>/saveAnswer" method="POST">
                 <p>Your answer</p>
                 <textarea name="body" cols="30" rows="10" placeholder="Be kind and sweet"></textarea>
-                <button type="submit">send</button>
-                <a href="#" type="submit" class="button" id="yellowButton">Send</a>
+                <div class="actionButtons">
+                        <button type="submit" class="button" id="yellowButton">Send</button>
+                </div>
+                
         </form>
 </div>
 
-<div class="answers">
+
         <%answer.forEach(answer => {%>
-                <%=answer.body%>
+                <div class="boxAnswer">
+                <p> <%=answer.body%> </p>
+                </div>
         <%})%>
-</div>

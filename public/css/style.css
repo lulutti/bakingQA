@@ -90,6 +90,11 @@ a:visited{
   color: var(--black);
 }
 
+p{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
 #numQuestions{
   text-align: center;
   margin-right: 3.0rem;
@@ -227,7 +232,7 @@ input::placeholder{
   font-size: 1.2rem;
 }
 
-.askButtons, .questionButtons{
+.actionButtons{
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -235,16 +240,13 @@ input::placeholder{
 }
 
 .boxAnswer{
-  display: flex;
-  flex-direction: column;
   width: 70rem;
   border-radius: .5rem;
   height: max-content;
-  padding: 2.4rem 5.5rem;
+  padding: 2.4rem 5.6rem;
   margin-top: 2.4rem;
   background-color: var(--white);
   box-shadow: 4px 0px 19px 0px #00000014;
-  padding: 2.4rem;
 }
 
 .boxAnswer form{

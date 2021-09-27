@@ -14,6 +14,7 @@ module.exports = {
                                 Answer.findAll({
                                         where: {questionId: req.params.id},
                                         raw: true,
+                                        order: [['id', 'DESC']]
                                 }).then(answer => res.render("question", {question: question, answer: answer}))
                                 
                         } else {

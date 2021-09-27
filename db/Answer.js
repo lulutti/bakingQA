@@ -5,12 +5,14 @@ const Question = require("./Question");
 const Answer = db.define("answers", {
         body: {
                 type: Sequelize.TEXT,
-                allowNull: false
+                allowNull: false,
+                notEmpty: true
         },
         id:{
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
                 primaryKey: true,
+                notEmpty: true
         },
 });
 

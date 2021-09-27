@@ -5,9 +5,9 @@ const Answer = require("../db/Answer");
 
 
 module.exports = {
-        save(req, res){
+        async save(req, res){
                 const questionId = req.params.id;
-                Answer.create({
+                 await Answer.create({
                         body: req.body.body,
                         questionId: questionId,
                 })
