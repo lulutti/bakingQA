@@ -7,10 +7,14 @@ const Answer = require("../db/Answer");
 module.exports = {
         async save(req, res){
                 const questionId = req.params.id;
-                 await Answer.create({
+                 try{ await Answer.create({
                         body: req.body.body,
                         questionId: questionId,
                 })
                 res.redirect(`/question/${questionId}`)
+                }catch(err){
+                        console.log(err.message)
+                        res.redirect(`/question/${questionId}`)
+                }
         },
 }

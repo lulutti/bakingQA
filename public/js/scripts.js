@@ -1,6 +1,6 @@
-// let boxQuestion = document.querySelector('.boxQuestion');
-// let descriptionAsk = document.querySelector('#descriptionAsk');
+let answerButton = document.querySelector(".boxquestion #yellowButton");
 
-// boxQuestion.addEventListener("click", () => {
-//        descriptionAsk.classList.remove("view");
-// })
+answerButton.addEventListener("click", () => {
+        let answerBox = document.querySelector(".boxAnswer");
+        answerBox.classList.remove("view")
+});

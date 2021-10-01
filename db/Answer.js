@@ -6,7 +6,9 @@ const Answer = db.define("answers", {
         body: {
                 type: Sequelize.TEXT,
                 allowNull: false,
-                notEmpty: true
+                validate: {
+                        notEmpty: true,
+                }
         },
         id:{
                 type: Sequelize.INTEGER,

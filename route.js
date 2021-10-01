@@ -5,6 +5,7 @@ const Question = require("./db/Question");
 const Answer = require("./db/Answer");
 const QuestionController = require("./controllers/QuestionController");
 const AnswerController = require("./controllers/AnswerController")
+const TopicController = require("./controllers/TopicController")
 
 //Database
 db
@@ -17,11 +18,7 @@ db
         })
 
 // Rotas
-route.get("/", (req, res) => {
-        Question.findAll({raw: true, attributes: ['title','description','id'], order:[['id','DESC']]}).then(questions => {
-                res.render("index", {questions: questions})
-        });
-});
+route.get("/", TopicController.numbers)
 
 route.get('/ask', (req, res) => res.render("ask"));
 

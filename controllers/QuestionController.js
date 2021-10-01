@@ -22,14 +22,19 @@ module.exports = {
                         }
                 })
         },
-        create(req, res){
-                Question.create({
+        async create(req, res){
+                try{
+                      const questionSave = 
+                      await Question.create({
                       title: req.body.title,
                       description: req.body.description
-                }).then(() => {
-                        res.redirect("/");
-                });
-}
+                })
+                res.redirect("/")
+                }catch(err){
+                        console.log(err.message)
+                        res.redirect("/ask")
+                }
+        }
 }
 
 

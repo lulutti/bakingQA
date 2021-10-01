@@ -11,7 +11,8 @@
           <a href="#" class="button" id="yellowButton">Answer</a>
         </div>
 </div>
-<div class=boxAnswer>
+
+<div class="boxAnswer view">
         <form action="/question/<%=question.id%>/saveAnswer" method="POST">
                 <p>Your answer</p>
                 <textarea name="body" cols="30" rows="10" placeholder="Be kind and sweet"></textarea>
@@ -28,3 +29,4 @@
                 <p> <%=answer.body%> </p>
                 </div>
         <%})%>
+<script src="../js/scripts.js"></script>

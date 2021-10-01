@@ -1,12 +1,13 @@
    <!DOCTYPE html>
    <%- include('./parts/head'); -%>
    <body>
+    <%- include('./parts/header'); -%>
      <main>
     <div class="askBox">
       <h1>My sweet question is</h1>
        <form method="POST" action="/saveQuestion">
-          <input name="title" type="text" placeholder="Question Title"/>
-          <textarea name="description" rows="5" placeholder="Describe your question..."></textarea>
+          <input id="title" name="title" type="text" placeholder="Question Title"/>
+          <textarea name="description" placeholder="Describe your question..."></textarea>
           <div class="actionButtons">
             <button type="submit" class="button" id="yellowButton">Send</button>
             <a href="/" class="button" id="greyButton">Cancel</a>
@@ -14,6 +15,7 @@
       </form>
     </div>
   </main>
+  <script src="../public/js/scripts.js"></script>
    </body>
    </html>
    

@@ -11,12 +11,18 @@ const Question = db.define('question',{
         title:{
                 type: Sequelize.STRING,
                 allowNull: false,
-                notEmpty: true
+                validate:       {
+                        notEmpty: true,
+                        len: [4,50],
+                }
         },
         description:{
                 type: Sequelize.TEXT,
                 allowNull: false,
-                notEmpty: true
+                validate:       {
+                        notEmpty: true,
+                        max: 500,
+                }
         }
 });
 
